@@ -1,0 +1,107 @@
+/* Importăm un font caligrafic elegant de pe Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&display=swap');
+/* Stiluri generale pentru pagină */
+
+
+/* Titlul principal (H1) - Mare, caligrafic și centrat */
+
+
+/* Paragrafele și textul din body */
+p {
+    text-align: center;
+    font-size: 1.25rem;
+    color: rgb(236, 150, 204);             /* O nuanță mai blândă de baby pink pentru corpul textului */
+    max-width: 700px;
+    margin: 0 auto;            /* Centrarea blocului de text */
+    line-height: 1.8;
+}
+
+body {
+    margin: 0;   /* scoate marginea albă/albastră din jurul video-ului */
+}
+
+.bloc-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3024 / 1666;   /* proporțiile reale ale video-ului */
+    overflow: hidden;
+    display: flex;               /* centrează textul pe verticală și orizontală */
+    align-items: center;
+    justify-content: center;
+}
+
+.video-fundal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Voal ultramarin peste video, ca roz-ul să se vadă pe fundalul deschis */
+.voal {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(18, 10, 143, 0.55), rgba(18, 10, 143, 0.35));
+    z-index: 1;
+}
+
+/* Tot conținutul de peste video, centrat */
+.hero {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(10px, 2vw, 28px);
+}
+
+.logo {
+    width: min(60%, 900px);
+    height: auto;
+}
+
+/* Rândul cu linii fine și text sau ornament la mijloc */
+.rand-lux {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.6vw, 24px);
+}
+
+.linie {
+    display: block;
+    width: clamp(40px, 8vw, 120px);
+    height: 1px;
+    background: rgb(236, 150, 204);
+}
+
+.eticheta {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(11px, 1.4vw, 20px);
+    letter-spacing: 0.55em;
+    text-transform: uppercase;
+    color: rgb(236, 150, 204);
+    padding-left: 0.55em;   /* echilibrează spațierea de după ultima literă */
+}
+
+.diamant {
+    width: clamp(8px, 1vw, 14px);
+    height: auto;
+}
+
+.slogan {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(14px, 2vw, 28px);
+    letter-spacing: 0.04em;
+    color: rgb(236, 150, 204);
+    margin: 0;
+    max-width: none;
+}

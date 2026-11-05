@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Magazin de Cosmetice</title>
+    <link rel="stylesheet" href="{% static 'css/stil.css' %}">
+</head>
+<body style="background-color: #120a8f">
+   <div class="bloc-video">
+        <video class="video-fundal" autoplay muted loop playsinline>
+            <source src="{% static 'video/fundal.mov' %}" type="video/mp4">
+        </video>
+        <div class="voal"></div>
+
+        <div class="hero">
+            <div class="rand-lux">
+                <span class="linie"></span>
+                <span class="eticheta">Luxe skincare</span>
+                <span class="linie"></span>
+            </div>
+
+            <img class="logo" src="{% static 'pics/belle-skin-logo.png' %}" alt="Belle.skin">
+
+            <div class="rand-lux">
+                <span class="linie"></span>
+                <svg class="diamant" viewBox="0 0 14 14" aria-hidden="true">
+                    <path d="M7 1 L13 7 L7 13 L1 7 Z" fill="none" stroke="rgb(236,150,204)" stroke-width="1"/>
+                </svg>
+                <span class="linie"></span>
+            </div>
+
+            <!--<p class="slogan">For your truest self</p>-->
+        </div>
+    </div>
+    <p>Acesta este un magazin online de unde se pot achiziționa produse cosmetice.</p>
+</body>
+</html>
